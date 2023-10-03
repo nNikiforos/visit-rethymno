@@ -4,7 +4,7 @@
     <div class="navbar-list">
       <ul>
         <li class="navbar-list_link" v-for="link in links" :key="link">
-          <a :href="link.link"></a>{{ link.name }}
+          <router-link :to="link.link">{{ link.name }}</router-link>
         </li>
       </ul>
     </div>
@@ -15,11 +15,11 @@
 export default {
   setup() {
     const links = [
-      { name: "Home", link: "#" },
-      { name: "History", link: "#" },
-      { name: "Adventures", link: "#" },
-      { name: "Events", link: "#" },
-      { name: "Contact", link: "#" },
+      { name: "Home", link: "/" },
+      { name: "History", link: "/history" },
+      { name: "Adventures", link: "/adventures" },
+      { name: "Events", link: "/events" },
+      { name: "Contact", link: "/contact" },
     ];
 
     return { links };
@@ -28,15 +28,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar{
+@import "../assets/global.scss";
+
+.navbar {
   background-color: blue;
   display: flex;
+  align-content: space-between;
+  justify-content: space-around;
 
-&-list ul{
-  display: flex;
+  padding: 25px;
+
+  &-logo {
+    background-color: orange;
+  }
+
+  &-list ul {
+    display: flex;
+
+    li {
+      padding: 0 25px;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
 }
-
-}
-
-
 </style>
