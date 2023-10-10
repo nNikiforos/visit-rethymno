@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .history {
   height: 100vh;
   background-color: rgb(0, 217, 255);

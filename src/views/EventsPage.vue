@@ -5,7 +5,7 @@
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .events {
   height: 100vh;
   background-color: rgb(102, 255, 0);

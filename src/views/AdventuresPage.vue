@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .adventures {
   height: 100vh;
   background-color: rgb(255, 0, 89);

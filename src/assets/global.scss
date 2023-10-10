@@ -1,6 +1,58 @@
+/* COLOR VARIABLES */
+$color-primary: #5e93d9;
+$color-primary-dark: #2b68b1;
+$color-primary-light: #d6e6f3;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #e9ecef;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #17110a;
+$color-grey-dark-2: #343a40;
+
+/* FONT VARIABLES */
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+/* RESPONSIVE BREAKPOINTS */
+$bp-larrgest: 75em; /* 1200px */
+$bp-large: 62.5em; /* 1000px */
+$bp-medium: 50em; /* 800px */
+$bp-small: 37.5em; /* 600px */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#app {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-larrgest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+
+  line-height: 1.6;
+}
+
+/* Reusable styles */
+.active-link {
+  background-color: $color-primary;
+}

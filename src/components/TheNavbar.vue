@@ -1,10 +1,16 @@
 <template>
   <div class="navbar">
-    <div class="navbar-logo">Logo</div>
-    <div class="navbar-list">
-      <ul>
-        <li class="navbar-list_link" v-for="link in links" :key="link">
-          <router-link :to="link.link">{{ link.name }}</router-link>
+    <div class="navbar__logo">
+      <router-link to="/">
+        <img src="../img/rethlogo1.png" alt="logo" />
+      </router-link>
+    </div>
+    <div>
+      <ul class="navbar__list">
+        <li class="navbar__list-link" v-for="link in links" :key="link">
+          <router-link :to="link.link" exact-active-class="active-link">{{
+            link.name
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -28,32 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/global.scss";
-
-.navbar {
-  background-color: blue;
-  display: flex;
-  align-content: space-between;
-  justify-content: space-around;
-
-  padding: 25px;
-
-  &-logo {
-    background-color: orange;
-  }
-
-  &-list ul {
-    display: flex;
-
-    li {
-      padding: 0 25px;
-      list-style: none;
-
-      a {
-        text-decoration: none;
-        color: black;
-      }
-    }
-  }
-}
+@import "@/assets/global.scss";
+@import "@/assets/navbar.scss";
 </style>

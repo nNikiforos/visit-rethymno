@@ -1,12 +1,25 @@
 <template>
   <div class="home">
-    <h3>HOME</h3>
+    <div class="home__mainimg"></div>
   </div>
 </template>
 
-<style scoped>
+<script>
+export default {
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "../assets/global.scss";
+
 .home {
-  height: 100vh;
-  background-color: red;
+  &__mainimg {
+    background: url(../img/home/rethmain1.jpg) no-repeat center CENTER/COVER;
+    height: 60vh;
+    background-attachment: fixed;
+  }
 }
 </style>

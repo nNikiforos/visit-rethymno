@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .notfound {
   height: 100vh;
   background-color: rgb(178, 106, 209);
