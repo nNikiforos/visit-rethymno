@@ -18,17 +18,13 @@
 </template>
 
 <script>
-export default {
-  setup() {
-    const links = [
-      { name: "Home", link: "/" },
-      { name: "History", link: "/history" },
-      { name: "Adventures", link: "/adventures" },
-      { name: "Events", link: "/events" },
-      { name: "Contact", link: "/contact" },
-    ];
+import links from "../links.js";
 
-    return { links };
+export default {
+  data() {
+    return {
+      links: links,
+    };
   },
 };
 </script>

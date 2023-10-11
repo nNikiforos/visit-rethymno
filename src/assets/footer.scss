@@ -1,0 +1,26 @@
+.footer {
+  background-color: $color-primary;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &__usefullinks {
+    background-color: red;
+  }
+
+  &__activities {
+    background-color: green;
+  }
+
+  &__contact {
+    background-color: yellow;
+  }
+
+  &__logo {
+    background-color: orange;
+  }
+
+  &__copyrights {
+    background-color: purple;
+  }
+}
