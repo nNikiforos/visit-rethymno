@@ -5,7 +5,7 @@ $color-primary-light: #d6e6f3;
 
 $color-secondary: #101d2c;
 
-$color-grey-light-1: #e9ecef;
+$color-grey-light-1: #e6e7e9;
 $color-grey-light-2: #aaa;
 
 $color-grey-dark-1: #17110a;
@@ -16,12 +16,17 @@ $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
 /* RESPONSIVE BREAKPOINTS */
-$bp-larrgest: 75em; /* 1200px */
-$bp-large: 62.5em; /* 1000px */
-$bp-medium: 50em; /* 800px */
-$bp-small: 37.5em; /* 600px */
+$bp-larrgest: 75em;
+/* 1200px */
+$bp-large: 62.5em;
+/* 1000px */
+$bp-medium: 50em;
+/* 800px */
+$bp-small: 37.5em;
+/* 600px */
 
 /* font size */
+$font-small: 1.1rem;
 $font-normal: 1.4rem;
 
 * {

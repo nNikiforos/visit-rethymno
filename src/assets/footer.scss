@@ -1,26 +1,50 @@
 .footer {
   background-color: $color-primary;
-  position: fixed;
-  bottom: 0;
+  display: grid;
+  justify-content: space-evenly;
+  justify-items: center;
+
   width: 100%;
+  padding: 2.5rem 0;
+  gap: 2rem;
+  grid-template-rows: 2fr;
+  grid-template-columns: repeat(4, 20rem);
 
-  &__usefullinks {
-    background-color: red;
+
+  * {
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    display: grid;
+    color: #fff;
+    font-size: $font-small;
   }
 
-  &__activities {
-    background-color: green;
+  * h3 {
+    font-weight: 700;
+    font-size: $font-normal;
+    padding-bottom: 3px;
   }
 
-  &__contact {
-    background-color: yellow;
+  * a:link,
+  a:visited {
+    transition: all 0.3s;
+
   }
 
-  &__logo {
-    background-color: orange;
+  * a:hover {
+    color: $color-grey-light-1;
+  }
+
+
+  &__logo img {
+    width: 200px;
+    height: auto;
   }
 
   &__copyrights {
-    background-color: purple;
+
+    grid-column: 2 / 4;
+    align-self: self-end;
   }
 }

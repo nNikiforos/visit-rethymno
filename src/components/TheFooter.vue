@@ -27,7 +27,9 @@
       <a href="mailto:example@example.com">example@example.com</a>
       <p>TEL:(+30)6971000000</p>
     </div>
-    <div class="footer__logo">LOGO</div>
+    <div class="footer__logo"> <router-link to="/">
+        <img src="../img/rethlogo1.png" alt="logo" />
+      </router-link></div>
     <div class="footer__copyrights">
       <p>&copy; 2023 Nikos Nikiforos. All rights reserved.</p>
     </div>
