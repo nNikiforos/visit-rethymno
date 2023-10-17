@@ -1,0 +1,23 @@
+.home {
+    background-color: $color-primary-light;
+
+    &__flexcontent {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(97, 97, 199);
+
+        &-toplocations {
+            height: 25vh;
+            background-color: red;
+        }
+
+        &-learnhistory {
+            background-color: green;
+        }
+
+        &-minigallery {
+            height: 40vh;
+            background-color: orange;
+        }
+    }
+}

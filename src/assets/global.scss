@@ -64,3 +64,16 @@ body {
 .active-link {
   background-color: $color-primary;
 }
+
+.container {
+
+  width: 1080px;
+  width: 70%;
+  margin: auto;
+}
+
+.title {
+  font-size: $font-normal;
+  font-weight: 800;
+  color: $color-secondary ;
+}
