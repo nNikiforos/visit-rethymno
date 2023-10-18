@@ -28,6 +28,7 @@ $bp-small: 37.5em;
 /* font size */
 $font-small: 1.1rem;
 $font-normal: 1.4rem;
+$font-large: 2rem;
 
 * {
   margin: 0;
@@ -76,4 +77,12 @@ body {
   font-size: $font-normal;
   font-weight: 800;
   color: $color-secondary ;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.titlelight {
+  font-size: $font-large;
+  font-weight: 700;
+  color: $color-grey-light-1 ;
 }

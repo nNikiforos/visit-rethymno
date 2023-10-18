@@ -1,10 +1,18 @@
 .home {
+
+
+    &__mainimg {
+        background: url(../img/home/rethmain1.jpg) no-repeat center CENTER/COVER;
+        height: 60vh;
+        background-attachment: fixed;
+    }
+
     background-color: $color-primary-light;
 
     &__flexcontent {
         display: flex;
         flex-direction: column;
-        background-color: rgb(97, 97, 199);
+
 
         &-toplocations {
             height: 25vh;
@@ -19,5 +27,87 @@
             height: 40vh;
             background-color: orange;
         }
+
+        &-events {
+            width: 45vw;
+            align-self: center;
+            padding-bottom: 25px;
+            justify-content: center;
+
+            .eventsimg img {
+
+                width: 100%;
+                height: 40vh;
+                object-fit: cover;
+                object-position: center;
+            }
+
+        }
     }
+
+
+    /* 3 BOXES MORE TO SEE */
+
+    .moretosee {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .arrowdown {
+        text-align: center;
+        margin-top: 0;
+        font-size: 3rem;
+    }
+
+
+    &__boxes {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+        overflow: hidden;
+        cursor: pointer;
+
+        &-num1 {
+            width: 40vw;
+            background: url(../img/home/actlogo.jpg) center center/cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &-num2 {
+            width: 30vw;
+            background: url(../img/home/natlogo.jpg) center center/cover;
+            border-left: 1px solid hsla(0, 0%, 100%, 0.336);
+            border-right: 1px solid hsla(0, 0%, 100%, 0.336);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        &-num3 {
+            width: 30vw;
+            background: url(../img/home/museumlogo.jpg) center center/cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+
+        &-num1:hover,
+        &-num2:hover,
+        &-num3:hover {
+            transform: scale(0.9);
+        }
+    }
+
+    &__boxtitle {
+        text-transform: uppercase;
+        padding: 25px;
+
+
+    }
+
+    &__boxes-num2 &__boxtitle {
+        display: flex;
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+
 }
