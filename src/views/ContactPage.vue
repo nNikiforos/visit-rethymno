@@ -7,6 +7,6 @@
 <style lang="scss" scoped>
 .contact {
   height: 100vh;
-  background-color: rgb(54, 36, 134);
+  background-color: red;
 }
 </style>

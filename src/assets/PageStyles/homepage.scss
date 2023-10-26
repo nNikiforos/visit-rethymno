@@ -2,7 +2,7 @@
 
 
     &__mainimg {
-        background: url(../img/home/rethmain1.jpg) no-repeat center CENTER/COVER;
+        background: url(/public/img/home/rethmain1.jpg) no-repeat center CENTER/COVER;
         height: 60vh;
         background-attachment: fixed;
     }
@@ -69,13 +69,13 @@
 
         &-num1 {
             width: 40vw;
-            background: url(../img/home/actlogo.jpg) center center/cover;
+            background: url(/public/img/home/actlogo.jpg) center center/cover;
             transition: transform 0.5s ease-in-out;
         }
 
         &-num2 {
             width: 30vw;
-            background: url(../img/home/natlogo.jpg) center center/cover;
+            background: url(/public/img/home/natlogo.jpg) center center/cover;
             border-left: 1px solid hsla(0, 0%, 100%, 0.336);
             border-right: 1px solid hsla(0, 0%, 100%, 0.336);
             transition: transform 0.5s ease-in-out;
@@ -83,7 +83,7 @@
 
         &-num3 {
             width: 30vw;
-            background: url(../img/home/museumlogo.jpg) center center/cover;
+            background: url(/public/img/home/museumlogo.jpg) center center/cover;
             transition: transform 0.5s ease-in-out;
         }
 

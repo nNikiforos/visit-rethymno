@@ -28,7 +28,7 @@
       <p>TEL:(+30)6971000000</p>
     </div>
     <div class="footer__logo"> <router-link to="/">
-        <img src="../img/rethlogo1.png" alt="logo" />
+        <img src="/img/rethlogo1.png" alt="logo" />
       </router-link></div>
     <div class="footer__copyrights">
       <p>&copy; 2023 Nikos Nikiforos. All rights reserved.</p>
@@ -49,6 +49,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/global.scss";
 @import "@/assets/footer.scss";
 </style>

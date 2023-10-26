@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar__logo">
       <router-link to="/">
-        <img src="../img/rethlogo1.png" alt="logo" />
+        <img src="/img/rethlogo1.png" alt="logo" />
       </router-link>
     </div>
     <div>
@@ -30,6 +30,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/global.scss";
-@import "@/assets/navbar.scss";
+@import "../assets/navbar.scss";
 </style>

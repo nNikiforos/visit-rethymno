@@ -1,12 +1,31 @@
 <template>
   <div class="history">
-    <h3>HISTORY</h3>
+    <div class="history__mainimg"></div>
+    <div class="title container">
+      <h3>{{ historyTitle }}</h3>
+    </div>
+    <history-slot :historyImgs="historyImgs" :historycontent="historyContent" />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.history {
-  height: 100vh;
-  background-color: rgb(0, 217, 255);
-}
+<script>
+import HistorySlot from "@/components/HistoryPageSlots/HistorySlot.vue";
+import historyJsonContent from "@/assets/Data/historyRethContent.json";
+
+export default {
+  data() {
+    return {
+      historyTitle: historyJsonContent.historyTitle,
+      historyContent: historyJsonContent.historyContent,
+      historyImgs: historyJsonContent.historyImgs,
+    };
+  },
+  components: {
+    HistorySlot,
+  },
+};
+</script>
+
+<style lang="scss">
+@import "../assets/PageStyles/historypage.scss";
 </style>

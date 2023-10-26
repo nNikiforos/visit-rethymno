@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang="scss" >
-@import "../assets/homepage.scss";
+@import "../assets/PageStyles/homepage.scss";
 </style>

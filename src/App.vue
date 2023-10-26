@@ -18,6 +18,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import url(./assets/global.scss);
+<style lang="scss" >
+@import "./assets/global.scss";
 </style>
