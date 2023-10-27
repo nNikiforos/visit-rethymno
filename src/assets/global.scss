@@ -1,7 +1,7 @@
 /* COLOR VARIABLES */
 $color-primary: #5e93d9;
 $color-primary-dark: #2b68b1;
-$color-primary-light: #d6e6f3;
+$color-primary-light: #f0f7fd;
 
 $color-secondary: #101d2c;
 
@@ -28,6 +28,7 @@ $bp-small: 37.5em;
 /* font size */
 $font-small: 1.1rem;
 $font-normal: 1.4rem;
+$font-medium: 1.6rem;
 $font-large: 2rem;
 
 * {
@@ -67,7 +68,6 @@ body {
 }
 
 .container {
-
   width: 1080px;
   width: 70%;
   margin: auto;
@@ -76,7 +76,7 @@ body {
 .title {
   font-size: $font-normal;
   font-weight: 800;
-  color: $color-secondary ;
+  color: $color-secondary;
   margin-top: 40px;
   margin-bottom: 15px;
 }
@@ -84,5 +84,5 @@ body {
 .titlelight {
   font-size: $font-large;
   font-weight: 700;
-  color: $color-grey-light-1 ;
+  color: $color-grey-light-1;
 }

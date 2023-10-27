@@ -4,7 +4,11 @@
     <div class="title container">
       <h3>{{ historyTitle }}</h3>
     </div>
-    <history-slot :historyImgs="historyImgs" :historycontent="historyContent" />
+    <history-slot
+      :historyImgs="historyImgs"
+      :historycontent="historyContent"
+      :historycontent1="historyContent1"
+    />
   </div>
 </template>
 
@@ -17,6 +21,7 @@ export default {
     return {
       historyTitle: historyJsonContent.historyTitle,
       historyContent: historyJsonContent.historyContent,
+      historyContent1: historyJsonContent.historyContent1,
       historyImgs: historyJsonContent.historyImgs,
     };
   },
