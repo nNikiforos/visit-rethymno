@@ -69,7 +69,6 @@ body {
 
 .container {
   width: 1080px;
-  width: 70%;
   margin: auto;
 }
 
@@ -79,10 +78,23 @@ body {
   color: $color-secondary;
   margin-top: 40px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .titlelight {
   font-size: $font-large;
   font-weight: 700;
   color: $color-grey-light-1;
+}
+
+.linebrake {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.37),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.37)
+  );
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.37);
 }

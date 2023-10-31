@@ -1,0 +1,66 @@
+.events {
+  margin-bottom: 5rem;
+
+  p {
+    font-size: $font-medium;
+  }
+
+  //PAGE WALLPAPER//
+  &__mainimg {
+    display: flex;
+    height: 40vh;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 40%);
+
+    &-img1,
+    &-img2 {
+      flex: 1;
+      height: 100%;
+    }
+
+    &-img1 {
+      background: url(../../public/img/events/eventimg.jpg) no-repeat center
+        center/cover;
+    }
+    &-img2 {
+      background: url(../../public/img/events/miriokefala/miriokefala2.jpg)
+        no-repeat center center/cover;
+    }
+  }
+
+  //CENTERED CONTENT//
+
+  &__maincontent {
+    width: 80rem;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+
+  //4 CONTENTS//
+
+  &__detailboxes {
+    display: grid;
+    gap: 4rem;
+
+    &-detailbox {
+      display: flex;
+
+      &-content {
+        h3 {
+          text-align: left;
+          margin: 0;
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      &-carousel {
+        background-color: rgb(65, 65, 207);
+      }
+    }
+
+    &-detailbox:nth-of-type(3n),
+    &-detailbox:nth-of-type(7n) {
+      flex-direction: row-reverse;
+    }
+  }
+}
