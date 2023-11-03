@@ -13,50 +13,31 @@
       <p>{{ eventsJsonData.mainContent }}</p>
     </div>
 
-    <div class="events__detailboxes container">
-      <!-- first content -->
-      <div class="events__detailboxes-detailbox">
+    <div
+      class="events__detailboxes container"
+      v-for="(event, index) in eventsJsonData.events"
+      :key="event.id"
+    >
+      <div
+        class="events__detailboxes-detailbox"
+        :class="{ 'row-reverse': index % 2 === 1 }"
+      >
         <div class="events__detailboxes-detailbox-content">
-          <h3 class="title">{{ eventsJsonData.title[0].num0 }}</h3>
-          <p>{{ eventsJsonData.content[0].num0 }}</p>
+          <h3 class="title">{{ event.title }}</h3>
+          <p>{{ event.content }}</p>
         </div>
-        <div class="events__detailboxes-detailbox-carousel">carousel</div>
+        <ImageCarousel :images="event.images" />
       </div>
-      <div class="linebrake"></div>
-
-      <!-- second content -->
-      <div class="events__detailboxes-detailbox">
-        <div class="events__detailboxes-detailbox-content">
-          <h3 class="title">{{ eventsJsonData.title[1].num1 }}</h3>
-          <p>{{ eventsJsonData.content[1].num1 }}</p>
-        </div>
-        <div class="events__detailboxes-detailbox-carousel">carousel</div>
-      </div>
-      <div class="linebrake"></div>
-
-      <!-- third content -->
-      <div class="events__detailboxes-detailbox">
-        <div class="events__detailboxes-detailbox-content">
-          <h3 class="title">{{ eventsJsonData.title[2].num2 }}</h3>
-          <p>{{ eventsJsonData.content[2].num2 }}</p>
-        </div>
-        <div class="events__detailboxes-detailbox-carousel">carousel</div>
-      </div>
-      <div class="linebrake"></div>
-
-      <!-- fourth content -->
-      <div class="events__detailboxes-detailbox">
-        <div class="events__detailboxes-detailbox-content">
-          <h3 class="title">{{ eventsJsonData.title[3].num3 }}</h3>
-          <p>{{ eventsJsonData.content[3].num3 }}</p>
-        </div>
-        <div class="events__detailboxes-detailbox-carousel">carousel</div>
-      </div>
+      <div
+        class="linebrake"
+        v-if="index !== eventsJsonData.events.length - 1"
+      ></div>
     </div>
   </div>
 </template>
 
 <script setup>
+import ImageCarousel from "../components/ImageCarousel.vue";
 import eventsJsonData from "../assets/Data/eventRethContent.json";
 </script>
 

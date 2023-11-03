@@ -1,5 +1,5 @@
 .events {
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 
   p {
     font-size: $font-medium;
@@ -8,7 +8,7 @@
   //PAGE WALLPAPER//
   &__mainimg {
     display: flex;
-    height: 40vh;
+    height: 60vh;
     background-attachment: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%, 0 40%);
 
@@ -28,6 +28,11 @@
     }
   }
 
+  .linebrake {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
   //CENTERED CONTENT//
 
   &__maincontent {
@@ -39,27 +44,22 @@
   //4 CONTENTS//
 
   &__detailboxes {
-    display: grid;
-    gap: 4rem;
-
     &-detailbox {
+      gap: 3rem;
       display: flex;
 
       &-content {
+        max-height: 35rem;
+        overflow-y: auto;
         h3 {
           text-align: left;
           margin: 0;
           margin-bottom: 1.2rem;
         }
       }
-
-      &-carousel {
-        background-color: rgb(65, 65, 207);
-      }
     }
-
-    &-detailbox:nth-of-type(3n),
-    &-detailbox:nth-of-type(7n) {
+    //dynamic row reverse eventspage.vue line23//
+    .row-reverse {
       flex-direction: row-reverse;
     }
   }
