@@ -121,3 +121,23 @@ body {
 ::-webkit-scrollbar-track:hover {
   background-color: $color-grey-light-1; /* Set the color of the scrollbar track when hovering */
 }
+
+//buttons
+.submit-btn {
+  background-color: $color-primary;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: $font-medium;
+  transition: all 0.5s;
+  grid-column: 1 / -1;
+  justify-self: flex-end;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: scale(0.99);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+}
