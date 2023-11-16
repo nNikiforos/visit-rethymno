@@ -159,25 +159,27 @@ export default {
   methods: {
     validateFirstName() {
       this.formDataValid.firstName = !!this.formData.firstName.trim();
-      this.firstNameDirty = true;
+      this.firstNameDirty = !this.formDataValid.firstName;
     },
     validateLastName() {
       this.formDataValid.lastName = !!this.formData.lastName.trim();
-      this.lastNameDirty = true;
+      this.lastNameDirty = !this.formDataValid.lastName;
     },
     validateEmail() {
       this.formDataValid.email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
         this.formData.email.trim()
       );
-      this.emailDirty = true;
+      this.emailDirty = !this.formDataValid.email;
     },
+
     validatePhone() {
       this.formDataValid.phone = /^\d{5,10}$/.test(this.formData.phone.trim());
-      this.phoneDirty = true;
+      this.phoneDirty = !this.formDataValid.phone;
     },
+
     validateMessage() {
       this.formDataValid.message = !!this.formData.message.trim();
-      this.messageDirty = true;
+      this.messageDirty = !this.formDataValid.message;
     },
     submitForm() {
       // Reset form validation
@@ -219,6 +221,15 @@ export default {
         console.log("Form submitted:", this.formData);
         this.formSubmitted = true;
         // You can perform additional actions here, like sending the form data to a server
+
+        // Clear the form data after submission
+        this.formData = {
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        };
       }
     },
     closeModal() {
