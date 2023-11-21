@@ -5,6 +5,10 @@
       <p class="title">Thank you for contacting us!</p>
       <router-link to="/">Go to Homepage</router-link>
       <button class="submit-btn" @click="closeModal">Close</button>
+      <div class="dataLink">
+        <p>Press Data to see page with the Contact Form data</p>
+        <router-link to="/formData">Data</router-link>
+      </div>
     </div>
   </div>
 
@@ -39,10 +43,7 @@
             @blur="validateFirstName"
             required
           />
-          <p
-            v-if="!formData.firstNameValid && firstNameDirty"
-            class="error-message"
-          >
+          <p v-if="firstNameDirty" class="error-message">
             First name is required.
           </p>
         </div>
@@ -60,10 +61,7 @@
             @blur="validateLastName"
             required
           />
-          <p
-            v-if="!formData.lastNameValid && lastNameDirty"
-            class="error-message"
-          >
+          <p v-if="lastNameDirty" class="error-message">
             Lastname is required.
           </p>
         </div>
@@ -81,9 +79,7 @@
             @blur="validateEmail"
             required
           />
-          <p v-if="!formData.emailValid && emailDirty" class="error-message">
-            Email not valid
-          </p>
+          <p v-if="emailDirty" class="error-message">Email not valid</p>
         </div>
 
         <!-- phone -->
@@ -99,9 +95,7 @@
             @blur="validatePhone"
             required
           />
-          <p v-if="!formData.phoneValid && phoneDirty" class="error-message">
-            Phone not valid
-          </p>
+          <p v-if="phoneDirty" class="error-message">Phone not valid</p>
         </div>
 
         <!-- message -->
@@ -117,10 +111,7 @@
             @blur="validateMessage"
             required
           ></textarea>
-          <p
-            v-if="!formData.messageValid && messageDirty"
-            class="error-message"
-          >
+          <p v-if="messageDirty" class="error-message">
             PLease insert a message
           </p>
         </div>
@@ -220,7 +211,6 @@ export default {
       if (!hasErrors) {
         console.log("Form submitted:", this.formData);
         this.formSubmitted = true;
-        // You can perform additional actions here, like sending the form data to a server
 
         // Clear the form data after submission
         this.formData = {
@@ -232,8 +222,8 @@ export default {
         };
       }
     },
+
     closeModal() {
-      // Reset formSubmitted when closing the modal
       this.formSubmitted = false;
     },
   },

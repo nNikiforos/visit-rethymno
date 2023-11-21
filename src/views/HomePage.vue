@@ -2,18 +2,10 @@
   <div class="home">
     <div class="home__mainimg"></div>
     <div class="home__flexcontent container">
-      <TopLocationsSlot>
-        <template v-slot:top-locations />
-      </TopLocationsSlot>
-      <HistorySlot>
-        <template v-slot:learn-history />
-      </HistorySlot>
-      <MinigallerySlot>
-        <template v-slot:mini-gallery />
-      </MinigallerySlot>
-      <EventsSlot>
-        <template v-slot:events />
-      </EventsSlot>
+      <TopLocationsSlot />
+      <HistorySlot />
+      <MinigallerySlot />
+      <EventsSlot />
     </div>
     <BoxesSlot>
       <template v-slot:boxes />
@@ -29,7 +21,6 @@ import MinigallerySlot from "@/components/HomePageSlots/MinigallerySlot.vue";
 import BoxesSlot from "@/components/HomePageSlots/BoxesSlot.vue";
 
 export default {
-
   components: {
     TopLocationsSlot,
     HistorySlot,
@@ -40,6 +31,6 @@ export default {
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 @import "../assets/PageStyles/homepage.scss";
 </style>
