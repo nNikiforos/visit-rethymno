@@ -1,18 +1,46 @@
 <template>
   <div class="image-carousel">
     <div class="buttons">
+      <button
+        :style="{
+          backgroundColor: speedMultiplier === 1 ? activeColor : normalColor,
+        }"
+        class="speed-button"
+        @click="changeSpeed(1)"
+        ref="speedButton1"
+      >
+        x1
+      </button>
+      <button
+        :style="{
+          backgroundColor: speedMultiplier === 2 ? activeColor : normalColor,
+        }"
+        class="speed-button"
+        @click="changeSpeed(2)"
+        ref="speedButton2"
+      >
+        x2
+      </button>
+      <button
+        :style="{
+          backgroundColor: speedMultiplier === 4 ? activeColor : normalColor,
+        }"
+        class="speed-button"
+        @click="changeSpeed(4)"
+        ref="speedButton4"
+      >
+        x4
+      </button>
       <button class="carousel-button" @click="prevImage">Previous</button>
       <button class="carousel-button" @click="toggleCarousel">
         {{ isPlaying ? "Stop" : "Play" }}
       </button>
       <button class="carousel-button" @click="nextImage">Next</button>
-      <button class="speed-button" @click="changeSpeed(1)">x1</button>
-      <button class="speed-button" @click="changeSpeed(2)">x2</button>
-      <button class="speed-button" @click="changeSpeed(4)">x4</button>
     </div>
     <img :src="currentImage" alt="Carousel Image" />
   </div>
 </template>
+
 <script>
 export default {
   props: {
@@ -27,6 +55,8 @@ export default {
       isPlaying: false,
       intervalId: null,
       speedMultiplier: 1,
+      normalColor: "#5e93d9", // Change this to the default color
+      activeColor: "green", // Change this to the color you want for active speed
     };
   },
   computed: {
@@ -55,6 +85,13 @@ export default {
     },
     changeSpeed(multiplier) {
       this.speedMultiplier = multiplier;
+      // Reset color for all buttons
+      this.$refs.speedButton1.style.backgroundColor = this.normalColor;
+      this.$refs.speedButton2.style.backgroundColor = this.normalColor;
+      this.$refs.speedButton4.style.backgroundColor = this.normalColor;
+      // Set active color for the clicked button
+      this.$refs[`speedButton${multiplier}`].style.backgroundColor =
+        this.activeColor;
       if (this.isPlaying) {
         clearInterval(this.intervalId);
         this.intervalId = setInterval(this.nextImage, this.intervalDuration);
@@ -100,7 +137,6 @@ export default {
 }
 
 .speed-button {
-  background-color: $color-primary-dark;
   color: white;
   border: none;
   padding: 0.5rem;
