@@ -4,6 +4,7 @@ $color-primary-dark: #2b68b1;
 $color-primary-light: #f0f7fd;
 
 $color-secondary: #101d2c;
+$color-secondary-faded: #101d2c67;
 
 $color-grey-light-1: #e6e7e9;
 $color-grey-light-2: #aaa;
@@ -70,6 +71,11 @@ body {
 
 .container {
   width: 1080px;
+  margin: auto;
+}
+
+.containerbg {
+  width: 1280px;
   margin: auto;
 }
 

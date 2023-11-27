@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home__mainimg"></div>
-    <div class="home__flexcontent container">
+    <div class="home__flexcontent containerbg">
       <TopLocationsSlot />
       <HistorySlot />
       <MinigallerySlot />

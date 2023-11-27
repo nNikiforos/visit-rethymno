@@ -1,0 +1,34 @@
+{
+  "topLocations": [
+    {
+      "image": "/img/home/toplocations/arkadi.jpg",
+      "title": "Arkadi",
+      "info": "blablablabla"
+    },
+    {
+      "image": "/img/home/toplocations/foinikodasos.jpg",
+      "title": "Palm Forest",
+      "info": "blablablabla"
+    },
+    {
+      "image": "/img/home/toplocations/fortezza.jpg",
+      "title": "Fortezza Castle",
+      "info": "blablablabla"
+    },
+    {
+      "image": "/img/home/toplocations/kourtaliotiko.jpg",
+      "title": "Kourtaliotiko Gorge",
+      "info": "blablablabla"
+    },
+    {
+      "image": "/img/home/toplocations/oldtown.jpg",
+      "title": "The Old Town",
+      "info": "blablablabla"
+    },
+    {
+      "image": "/img/home/toplocations/triopetra.jpg",
+      "title": "Triopetra Beach",
+      "info": "blablablabla"
+    }
+  ]
+}
