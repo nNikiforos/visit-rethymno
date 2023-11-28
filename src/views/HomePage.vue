@@ -7,9 +7,7 @@
       <MinigallerySlot />
       <EventsSlot />
     </div>
-    <BoxesSlot>
-      <template v-slot:boxes />
-    </BoxesSlot>
+    <BoxesSlot />
   </div>
 </template>
 
