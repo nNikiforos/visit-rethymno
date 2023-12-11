@@ -1,7 +1,7 @@
 export default [
   { name: "Home", link: "/" },
   { name: "History", link: "/history" },
-  { name: "Adventures", link: "/adventures" },
+  { name: "Activities", link: "/activities" },
   { name: "Events", link: "/events" },
   { name: "Contact", link: "/contact" },
   { name: "Admin", link: "/formData" },

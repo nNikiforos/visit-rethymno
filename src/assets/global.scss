@@ -125,14 +125,29 @@ body {
 
 /* Track on hover */
 ::-webkit-scrollbar-track:hover {
-  background-color: $color-grey-light-1; /* Set the color of the scrollbar track when hovering */
+  background-color: $color-grey-light-1;
 }
 
 //buttons
+.custom-btn {
+  background-color: $color-primary;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.29);
+  }
+}
 .submit-btn {
   background-color: $color-primary;
   color: white;
-  padding: 15px;
+  padding: 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;

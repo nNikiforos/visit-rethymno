@@ -4,11 +4,11 @@
       <h3 class="title">Top locations</h3>
       <!-- SLIDER -->
       <div class="slider">
-        <div class="slider__arrows-left">
+        <div class="slider__arrows-left" @click="prevLocations">
           <i class="fa-solid fa-chevron-left"></i>
         </div>
         <div
-          v-for="(location, index) in topLocations"
+          v-for="(location, index) in displayedLocations"
           :key="index"
           class="slider__slide"
         >
@@ -16,7 +16,7 @@
           <h3 class="slider__slide-title">{{ location.title }}</h3>
           <p class="slider__slide-info">{{ location.info }}</p>
         </div>
-        <div class="slider__arrows-right">
+        <div class="slider__arrows-right" @click="nextLocations">
           <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
@@ -25,14 +25,32 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import data from "../../assets/Data/topLocationsContent.json";
 
 export default {
   setup() {
     const topLocations = ref(data.topLocations);
+    const currentIndex = ref(0);
 
-    return { topLocations };
+    const displayedLocations = computed(() => {
+      const start = currentIndex.value;
+      const end = start + 3;
+      return topLocations.value.slice(start, end);
+    });
+
+    const nextLocations = () => {
+      const lastIndex = topLocations.value.length - 1;
+      currentIndex.value = (currentIndex.value + 3) % (lastIndex + 1);
+    };
+
+    const prevLocations = () => {
+      const lastIndex = topLocations.value.length - 1;
+      currentIndex.value =
+        (currentIndex.value - 3 + (lastIndex + 1)) % (lastIndex + 1);
+    };
+
+    return { displayedLocations, nextLocations, prevLocations };
   },
 };
 </script>
@@ -44,6 +62,7 @@ export default {
 .slider {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 
   &__arrows-left,
   &__arrows-right {
@@ -74,7 +93,6 @@ export default {
   &__slides {
     margin: 0 2.5rem;
     display: flex;
-    gap: 25px;
   }
 
   &__slide {
@@ -87,7 +105,7 @@ export default {
 
     img {
       width: 100%;
-      height: 20rem;
+      height: 25rem;
       border-radius: 10px 10px 0 0;
       object-fit: cover;
     }
@@ -95,7 +113,7 @@ export default {
     &-title,
     &-info {
       font-size: $font-medium;
-      padding: 1rem;
+      padding: 0.5rem;
       text-align: center;
     }
   }

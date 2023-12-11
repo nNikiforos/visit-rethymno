@@ -39,7 +39,7 @@
   }
   .clipcontainer {
     position: relative;
-    height: 50rem;
+    height: 45rem;
 
     margin: 0 auto;
     transition: all 1s ease-in;
@@ -66,12 +66,12 @@
       }
 
       &:nth-child(1) {
-        clip-path: polygon(10% 0, 39.5% 0, 29.5% 100%, 0% 100%);
+        clip-path: polygon(10% 0, 38% 0, 28% 100%, 0% 100%);
         z-index: 1;
       }
 
       &:nth-child(2) {
-        clip-path: polygon(40% 0, 70.5% 0, 60.5% 100%, 30% 100%);
+        clip-path: polygon(40% 0, 69% 0, 59% 100%, 30% 100%);
         z-index: 1;
       }
 
