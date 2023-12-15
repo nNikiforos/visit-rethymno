@@ -6,7 +6,6 @@ import ActivitiesPage from "./views/ActivitiesPage.vue";
 import EventsPage from "./views/EventsPage.vue";
 import ContactPage from "./views/ContactPage.vue";
 import NotFound from "./views/NotFound.vue";
-import FormData from "./views/FormData.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,7 +15,7 @@ const router = createRouter({
     { path: "/events", component: EventsPage },
     { path: "/history", component: HistoryPage },
     { path: "/contact", component: ContactPage },
-    { path: "/formData", component: FormData },
+
     { path: "/:notFound(.*)", component: NotFound },
   ],
 });

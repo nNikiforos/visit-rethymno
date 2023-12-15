@@ -10,15 +10,16 @@
     </div>
     <div class="footer__activities">
       <h3>activities</h3>
-      <a href="#">adventures</a>
-      <a href="#">nature</a>
-      <a href="#">museums</a>
+      <router-link to="/activities">adventures</router-link>
+      <router-link to="/activities">nature</router-link>
+      <router-link to="/activities">museums</router-link>
     </div>
     <div class="footer__events">
       <h3>events</h3>
-      <a href="#">event1</a>
-      <a href="#">event2</a>
-      <a href="#">event3</a>
+      <router-link to="/events">event1</router-link>
+      <router-link to="/events">event2</router-link>
+      <router-link to="/events">event3</router-link>
+      <router-link to="/events">event4</router-link>
     </div>
     <div class="footer__contact">
       <h3>contact</h3>
@@ -27,9 +28,11 @@
       <a href="mailto:example@example.com">example@example.com</a>
       <p>TEL:(+30)6971000000</p>
     </div>
-    <div class="footer__logo"> <router-link to="/">
+    <div class="footer__logo">
+      <router-link to="/">
         <img src="/img/rethlogo1.png" alt="logo" />
-      </router-link></div>
+      </router-link>
+    </div>
     <div class="footer__copyrights">
       <p>&copy; 2023 Nikos Nikiforos. All rights reserved.</p>
     </div>

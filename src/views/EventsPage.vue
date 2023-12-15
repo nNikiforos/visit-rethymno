@@ -24,6 +24,7 @@
       >
         <div class="events__detailboxes-detailbox-content">
           <h3 class="title">{{ event.title }}</h3>
+          <h3 class="title"></h3>
           <p>{{ event.content }}</p>
         </div>
         <ImageCarousel :images="event.images" />

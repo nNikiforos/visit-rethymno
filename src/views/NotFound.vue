@@ -7,9 +7,6 @@
         <router-link to="/">the Home page</router-link>.
       </h3>
     </div>
-    <div class="notfound__lio container">
-      <img src="../../public/img/lio.jpg" alt="" />
-    </div>
   </div>
 </template>
 

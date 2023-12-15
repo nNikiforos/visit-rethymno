@@ -4,5 +4,4 @@ export default [
   { name: "Activities", link: "/activities" },
   { name: "Events", link: "/events" },
   { name: "Contact", link: "/contact" },
-  { name: "Admin", link: "/formData" },
 ];

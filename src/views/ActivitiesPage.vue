@@ -65,12 +65,15 @@
           class="activities__section-contents-content"
           v-if="currentTab === 'adventure'"
         >
-          <div class="activity-box">
+          <div id="activitiesLink" class="activity-box">
             <img
               src="/img/activities/adventures/bungee.jpg"
               alt="bunge jumping"
             />
             <h3 class="title">Bunge jumping</h3>
+          </div>
+          <div class="modal__activitie-bunge" style="display: none">
+            <p>xcadcasfsfsdfsd</p>
           </div>
           <div class="activity-box">
             <img src="/img/activities/adventures/dive.jpg" alt="diving" />
@@ -111,7 +114,7 @@
           class="activities__section-contents-content"
           v-if="currentTab === 'nature'"
         >
-          <div class="activity-box">
+          <div id="natureLink" class="activity-box">
             <img src="/img/activities/nature/melidoni.jpg" alt="melidoni " />
             <h3 class="title">melidoni cave</h3>
           </div>
